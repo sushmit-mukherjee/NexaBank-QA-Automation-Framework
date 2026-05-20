@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Suite">
+    <listeners>
+        <listener class-name="com.nexabank.reports.ExtentTestListener"/>
+    </listeners>
+    <test name="API Tests">
+        <groups>
+            <run>
+                <include name="api"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.nexabank.tests.api.UserApiTests"/>
+            <class name="com.nexabank.tests.api.BookingApiTests"/>
+        </classes>
+    </test>
+</suite>

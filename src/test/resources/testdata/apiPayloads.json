@@ -1,0 +1,10 @@
+{
+  "createUser": {
+    "name": "Sushmit Mukherjee",
+    "job": "QA Automation Engineer"
+  },
+  "updateUser": {
+    "name": "Sushmit Mukherjee",
+    "job": "Senior QA Automation Engineer"
+  }
+}

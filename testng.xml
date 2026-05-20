@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="NexaBank Hybrid Automation Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.nexabank.reports.ExtentTestListener"/>
+    </listeners>
+
+    <test name="UI Regression Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.nexabank.tests.ui.LoginTests"/>
+            <class name="com.nexabank.tests.ui.AccountOverviewTests"/>
+            <class name="com.nexabank.tests.ui.TransferFundsTests"/>
+            <class name="com.nexabank.tests.ui.BillPaymentTests"/>
+        </classes>
+    </test>
+
+    <test name="API Regression Tests">
+        <groups>
+            <run>
+                <include name="api"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.nexabank.tests.api.UserApiTests"/>
+            <class name="com.nexabank.tests.api.BookingApiTests"/>
+        </classes>
+    </test>
+</suite>
